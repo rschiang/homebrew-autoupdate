@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+HOMEBREW_OUTDATED_PACKAGES="$(brew outdated | wc -l)"
+if (( HOMEBREW_OUTDATED_PACKAGES > 0 )); then
+  echo "$HOMEBREW_OUTDATED_PACKAGES packages available for update."
+fi
